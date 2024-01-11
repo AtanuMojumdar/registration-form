@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      *,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  background: #282828;
+  font-family: sans-serif;
+  color: white;
+}
+
+
+h1 {
+  font-weight: bold;
+  font-size: x-large;
+  text-align: center;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.main-container {
+  padding: 2rem;
+  margin-inline: auto;
+  max-width: 40%;
+  margin-top: 5rem;
+  /* border: 2px solid #fff; */
+  background: #fff;
+  color: black;
+  border-radius: 1rem;
+}
+
+#note{
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: 1rem;
+}
+
+.formdiv {
+  display: flex;
+  flex-direction: column;
+  max-width: 65%;
+  margin-inline: auto;
+  margin-top: 2.2rem;
+}
+
+span {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 400;
+}
+input {
+  padding-inline: 4px;
+  border: 2px solid #4b7dd4;
+  border-radius: 4px;
+  height: 2.2rem;
+  border-radius: 0.5rem;
+}
+
+.btn{
+  margin-top: 0.6rem;
+    max-width: fit-content;
+    padding: 0.5rem;
+    background-color: rgb(72, 72, 228);
+    color: white;
+    border-radius: 4px;
+}
+.btn:hover{
+    background-color: rgb(47, 47, 233);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 480px) {
+  .main-container {
+    max-width: 90%;
+  }
+  .formdiv{
+    max-width: 85%;
+  }
+}
+    </style>    
+  </head>
+  <body>
+    <form method="post" action="/register" class="main-container">
+      <h1>Registration Form</h1>
+      <div class="formdiv">
+        <span>
+          <label for="name">Name:</label>
+          <input required id="name" type="text" name="name" />
+        </span>
+
+        <span>
+            <label for="email">Email:</label>
+            <input required id="email" type="email" name="email"/>
+          </span>
+
+          <span>
+            <label for="password">Password:</label>
+            <input required id="password" type="password" name="password"/>
+          </span>
+
+          <button type="submit" class="btn">Register</button>
+      </div>
+    </form>
+
+    <div id="note">
+      <h2>Note:</h2>
+      <ul>
+        <li>Name must contain alteast 3 characters</li>
+        <li>Email must contain alteast 6 characters</li>
+        <li>Password must be of 8 characters</li>
+      </ul>
+    </div>
+  </body>
+</html>
